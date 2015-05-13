@@ -5,10 +5,11 @@ function fmtSlackUrl(token, channelId) {
 }
 
 export function getAllEmails(req, res) {
+  console.log('req', req)
+  console.log('req.body', req.body)
+
   var channelId = req.body.channel_id
   var token = process.env.SLACK_API_TOKEN
-
-  console.log(require('util').inspect(res.body)({ depth: 5 }))
   request(fmtSlackUrl(token, channelId), function(error, response, body) {
     if (!error && response.statusCode == 200 && body.ok === true) {
       body.channel.members.forEach((member) => {
