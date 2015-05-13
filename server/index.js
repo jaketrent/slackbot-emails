@@ -12,6 +12,6 @@ app.use(bodyParser.json())
 
 routes.map(app)
 
-app.listen(3000 || process.env.PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('listening...')
 })
