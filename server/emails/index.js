@@ -8,6 +8,7 @@ export function getAllEmails(req, res) {
   console.log('req', req)
   console.log('req.body', req.body)
 
+
   var channelId = req.body.channel_id
   var token = process.env.SLACK_API_TOKEN
   request(fmtSlackUrl(token, channelId), function(error, response, body) {
