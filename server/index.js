@@ -8,7 +8,7 @@ var routes = require('./config/routes')
 
 var app = express()
 
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 routes.map(app)
 
