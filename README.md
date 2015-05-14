@@ -1,6 +1,8 @@
 # slackbot-emails
 
-Get the emails for all the users in the channel.
+Slash command to get the emails for all the users in the channel.
+
+![slackbot](https://slack.global.ssl.fastly.net/5a92/plugins/slackbot/assets/service_128.png)
 
 Returns as csv.
 
